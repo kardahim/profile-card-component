@@ -1,0 +1,100 @@
+:root {
+    /* colors */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+
+    /* displacement of circles */
+    --up: -50vh;
+    --side: -5vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    background-color: var(--dark-cyan);
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+footer {
+    text-align: center;
+}
+
+.card {
+    width: 350px;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.card-header {
+    background-image: url("/images/bg-pattern-card.svg");
+    background-size: cover;
+    height: 150px;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 5px solid white;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: -50px auto 20px auto;
+}
+
+.card-body {
+    padding: 0 20px 30px;
+}
+
+.name {
+    margin-bottom: 10px;
+}
+
+.age,
+.stats-value,
+.city {
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+}
+
+.card-footer {
+    border-top: 1px solid var(--dark-gray);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px;
+}
+
+.background .dot1,
+.background .dot2 {
+    position: absolute;
+}
+
+.background .dot1 {
+    top: var(--up);
+    left: var(--side);
+}
+
+.background .dot2 {
+    bottom: var(--up);
+    right: var(--side);
+}
